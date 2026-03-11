@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #2E7D32;
+}
+
+/* HERO */
+
+section {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 100px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f5f5f5 0%,
+    #e8f5e9 100%
+  );
+
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-tag{
+  background:#2E7D32;
+  color:white;
+
+  padding:6px 12px;
+  border-radius:20px;
+
+  font-size:14px;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-top: 15px;
+  color: #2E7D32;
+}
+
+.hero-text p {
+  margin-top: 18px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* LOGO HERO */
+
+.hero-logo-container{
+  background:white;
+
+  padding:30px;
+
+  border-radius:50%;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-logo{
+  width:180px;
+  height:auto;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-grid {
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  color: #2E7D32;
+}
+
+.feature-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* SCREENSHOTS */
+
+.screenshots {
+    text-align: center;
+}
+
+.screenshots-grid{
+  margin-top:40px;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+}
+
+.screenshot-img{
+
+  width:220px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.screenshot-img:hover{
+  transform:translateY(-6px) scale(1.03);
+
+  box-shadow:0 18px 40px rgba(0,0,0,0.35);
+}
+
+
+/* DOWNLOAD SECTION */
+
+.download{
+
+  padding:80px 20px;
+
+  text-align:center;
+
+  background:#f5f5f5;
+}
+
+.download h2{
+  font-size:2rem;
+  color:#2E7D32;
+}
+
+.download-text{
+  margin-top:15px;
+
+  font-size:1.1rem;
+
+  opacity:0.85;
+}
+
+/* PLAY STORE BUTTON */
+
+.playstore-btn{
+
+  margin-top:30px;
+
+  background:#2E7D32;
+
+  color:white;
+
+  border:none;
+
+  padding:14px 28px;
+
+  font-size:16px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.playstore-btn:hover{
+  background:#1b5e20;
+}
+
+/* PLAY STORE BADGE */
+
+.playstore-link{
+  display:inline-block;
+  margin-top:30px;
+}
+
+.playstore-badge{
+  width:200px;
+  transition:transform 0.2s ease;
+}
+
+.playstore-badge:hover{
+  transform:scale(1.05);
+}
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +72,7 @@ export default defineConfig([
   },
 ])
 ```
+=======
+# plazafit-web
+pagina oficial de plazafit
+>>>>>>> 9c5ae919c2f7e15adc8b65d4b7f56d241020568b

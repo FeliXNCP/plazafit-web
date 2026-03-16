@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior:smooth;
 }
 
 body {
@@ -13,6 +14,10 @@ body {
 /* NAVBAR */
 
 .navbar {
+
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +26,8 @@ body {
 
   background: white;
   border-bottom: 1px solid #ddd;
+
+  z-index: 1000;
 }
 
 .logo {
@@ -144,6 +151,7 @@ section {
 
 .screenshots {
     text-align: center;
+    scroll-margin-top: 90px;
 }
 
 .screenshots-grid{
@@ -239,6 +247,9 @@ section {
 .playstore-badge{
   width:200px;
   transition:transform 0.2s ease;
+  opacity:0.45;
+  filter: grayscale(100%);
+  cursor:not-allowed;
 }
 
 .playstore-badge:hover{

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-ckgeVgphSJkoYAeH5QjmBZQClJbTzlBy921TNN6gKD8='; style-src 'self'; connect-src https://*.supabase.co; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="color-scheme" content="light">
+  <title>Confirma tu correo · PlazaFit</title>
+  <script>(function () {
+  'use strict';
+  var fragment = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+  var query = new URLSearchParams(window.location.search.replace(/^\?/, ''));
+  function get(key) { return fragment.get(key) !== null ? fragment.get(key) : (query.get(key) || ''); }
+  window.__PLAZAFIT_AUTH_RETURN__ = {
+    accessToken: fragment.get('access_token') || '',
+    type: get('type'),
+    hasError: ['error', 'error_code', 'error_description'].some(function (key) {
+      return fragment.has(key) || query.has(key);
+    }),
+    errorCode: get('error_code'),
+    hasCode: fragment.has('code') || query.has('code'),
+    hasQueryToken: query.has('access_token')
+  };
+  // No guardar refresh_token ni la URL completa. Limpiar antes de cargar otros recursos.
+  try { window.history.replaceState(null, '', window.location.pathname); }
+  catch (_) { window.__PLAZAFIT_AUTH_RETURN__ = {}; }
+})();</script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./auth-config.js" defer></script>
+  <script src="./confirmation-core.js" defer></script>
+  <script src="./confirmation-ui.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <a class="brand" href="https://felixncp.github.io/plazafit-web/" aria-label="PlazaFit, página principal">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 14 16 5l11 9M8 12v15h16V12M13 27v-9h6v9"/></svg>
+      <span>PlazaFit</span>
+    </a>
+    <section class="card" id="status-card" data-state="neutral" aria-busy="false" aria-labelledby="status-title">
+      <p class="eyebrow">TU CUENTA PLAZAFIT</p>
+      <div class="status-icon" data-icon="loading" hidden aria-hidden="true"><span class="spinner"></span></div>
+      <div class="status-icon" data-icon="success" hidden aria-hidden="true"><svg viewBox="0 0 40 40"><path d="m10 20 7 7 14-16"/></svg></div>
+      <div class="status-icon" data-icon="neutral" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="10" width="30" height="22" rx="4"/><path d="m6 12 14 11 14-11"/></svg></div>
+      <div class="status-icon warning" data-icon="warning" hidden aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 11v11m0 6h.01"/></svg></div>
+      <div role="status" aria-live="polite" aria-atomic="true">
+        <h1 id="status-title">Confirma tu correo</h1>
+        <p class="description" id="status-description">Abre el enlace que te enviamos por correo para completar tu registro.</p>
+        <p class="detail" id="status-detail">Si ya lo confirmaste, vuelve a la app e inicia sesión.</p>
+      </div>
+      <div class="actions">
+        <button class="button secondary" id="retry-button" type="button" hidden>Reintentar comprobación</button>
+        <a class="button primary" id="app-button" href="plazafit://login" hidden>Abrir PlazaFit <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+        <a class="button primary" id="web-button" href="https://felixncp.github.io/plazafit-web/">Ir a la web de PlazaFit</a>
+      </div>
+      <p class="hint" id="app-hint">Desde un computador, abre PlazaFit en tu teléfono para iniciar sesión.</p>
+      <noscript><p class="detail">Activa JavaScript para comprobar el resultado aquí. También puedes volver a PlazaFit e intentar iniciar sesión.</p></noscript>
+    </section>
+    <p class="footer">Entrena en tu plaza o en casa.</p>
+  </main>
+</body>
+</html>
